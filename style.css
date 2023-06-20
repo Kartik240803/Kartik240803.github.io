@@ -200,7 +200,7 @@ section .title::after {
 
 .home {
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
+    background: url("https://github.com/Kartik240803/Kartik240803.github.io/blob/66c4c7d2d66eafdb98b96ac6897a679ab474f126/banner.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
