@@ -45,7 +45,7 @@ section {
 }
 
 .about,
-.services,
+.experience,
 .skills,
 .project,
 .contact,
@@ -54,7 +54,7 @@ footer {
 }
 
 .about .about-content,
-.services .serv-content,
+.experience .serv-content,
 .skills .skills-content,
 .contact .contact-content {
     display: flex;
@@ -311,26 +311,26 @@ section .title::after {
 }
 
 
-/* services section styling */
+/* Experience section styling */
 
-.services,
+.experience,
 .project {
     color: #fff;
     background: #111;
 }
 
-.services .title::before,
+.experience .title::before,
 .project .title::before {
     background: #fff;
 }
 
-.services .title::after,
+.experience .title::after,
 .project .title::after {
     background: #111;
-    content: "what i provide";
+    content: "what i did";
 }
 
-.services .serv-content .card {
+.experience .serv-content .card {
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -340,32 +340,110 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover {
+.experience .serv-content .card:hover {
     background: #A16E83;
 }
 
-.services .serv-content .card .box {
+.experience .serv-content .card .box {
     transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover .box {
+.experience .serv-content .card:hover .box {
     transform: scale(1.05);
 }
 
-.services .serv-content .card i {
+.experience .serv-content .card i {
     font-size: 50px;
     color: #A16E83;
     transition: color 0.3s ease;
 }
 
-.services .serv-content .card:hover i {
+.experience .serv-content .card:hover i {
     color: #fff;
 }
 
-.services .serv-content .card .text {
+.experience .serv-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+
+/* education section styling */
+
+.education .title::after {
+    content: "what i studied";
+}
+
+
+/* Education card */
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 10px 5%;
+}
+
+
+/* Education details */
+
+.education-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.education-item {
+    width: calc(33.33% - 40px);
+    margin: 2px 0;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #A16E83;
+}
+
+
+/* Add border to a specific card */
+
+.education-item.special-card {
+    border: 2px solid #A16E83;
+}
+
+
+/* Hover effect for education-item */
+
+.education-item:hover {
+    transform: scale(1.05);
+    background-color: #A16E83;
+    color: #fff;
+}
+
+.education-content {
+    flex: 1;
+    padding: 10px;
+    /* Adjust padding to reduce text margin */
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Adjustments for smaller screens */
+
+@media (max-width: 768px) {
+    .education-item {
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
 }
 
 
@@ -439,8 +517,8 @@ section .title::after {
     background: #A16E83;
 }
 
-.skills-content .right .tableau::before {
-    width: 90%;
+.skills-content .right .github::before {
+    width: 80%;
 }
 
 .skills-content .right .css::before {
@@ -741,7 +819,7 @@ footer span a:hover {
     .about .about-content .right {
         flex: 100%;
     }
-    .services .serv-content .card {
+    .experience .serv-content .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -765,7 +843,7 @@ footer span a:hover {
     .home .home-content a {
         font-size: 20px;
     }
-    .services .serv-content .card {
+    .experience .serv-content .card {
         width: 100%;
     }
 }
@@ -799,4 +877,124 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+
+/* experience card style */
+
+.experience-card:hover {
+    background: #A16E83;
+}
+
+.box1:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.experience-card {
+    display: flex;
+    background-color: #222;
+    border-radius: 10px;
+    /* padding: 20px; */
+    margin: 25px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 25px;
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+        /* justify-content: center; */
+        padding: 25px;
+        margin: 10px 20px;
+    }
+    .experience-card img {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.experience-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.experience-card img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.experience-details {
+    flex: 1;
+    /* display: flex; */
+}
+
+.experience-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.experience-details p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.experience-details ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: disc;
+    color: #333;
+}
+
+.experience-details li {
+    margin-bottom: 5px;
+    color: #ffffffa5;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #A16E83;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #222;
+}
+
+.experience-card:hover .card-button {
+    background-color: #222;
+    /* Change to your desired color */
+}
+
+.card:hover .card-button {
+    background-color: #222;
+    /* Change to your desired color */
+}
+
+.fa-linkedin-square {
+    font-size: 25px;
+    margin-right: 50px;
+    color: #A16E83;
+    vertical-align: middle;
+}
+
+.fa-github {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #A16E83;
+    vertical-align: middle;
 }
